@@ -46,7 +46,7 @@ def search_pdf_embeddings(user_id, query, top_k=3):
     
     print("Matching Docs:", docs)
     # Initialize the language model
-    llm = ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY)
+    llm = ChatOpenAI(model="gpt-4o", temperature=0, openai_api_key=OPENAI_API_KEY)
     
     # Load and run the QA chain
     chain = load_qa_chain(llm, chain_type="stuff")
